@@ -1,0 +1,22 @@
+/* Import custom fonts*/
+@font-face{ /*Principal font*/
+    font-family: 'Montserrat', sans-serif;
+    src: url("../fonts/Montserrat-Regular.ttf"); 
+}
+@font-face{ /*Regular text*/
+    font-family: 'Libre Baskerville', serif;
+    src: url("../fonts/LibreBaskerville-Regular.ttf");
+}
+
+/* General */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Navigation Bar */
+.navBar {
+    width: 100%;
+    height: 6rem;
+    background-color: #6b3868d1
+}

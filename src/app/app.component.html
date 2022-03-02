@@ -1,2 +1,20 @@
-<h1>Mi Portafolio</h1>
-<router-outlet></router-outlet>
+<!-- Navigation Bar -->
+<header class="navBar">
+    <ul>
+        <li><a [routerLink]="['/about-me']">About Me</a></li>
+        <li><a [routerLink]="['/projects']">Projects</a></li>
+        <li class="logo"><a href="#">AO</a></li>
+        <li><a [routerLink]="['/create-project']">Create Projects</a></li>
+        <li><a [routerLink]="['/cv']">CV</a></li>
+        <li><a [routerLink]="['/contact']">Contact</a></li>  
+    </ul>
+</header>
+
+<!-- Body or Content of my web -->
+<section class="content">
+    <router-outlet></router-outlet>
+</section>
+
+<footer>
+    Hecho por Ariadna Os &copy;
+</footer>
