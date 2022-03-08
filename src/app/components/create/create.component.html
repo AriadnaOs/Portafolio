@@ -1,1 +1,50 @@
-<p>create works!</p>
+<div class="content">
+    <h2>{{title}}</h2>
+
+    <div class="message success" *ngIf="status == 'success'">
+        The project it has been created successfully, you can <a href="#">see here.</a>
+    </div>
+
+    <div class="message failed" *ngIf="status  == 'failed'">
+        The project could not be created.
+    </div>
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <div>
+            <label for="name">Name:</label>  
+            <span class="alert" *ngIf="name.touched && !name.valid">The name is obligatory</span>
+            <input type="text" placeholder="Name of project" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <span class="alert"  *ngIf="description.touched && !description.valid">The description is obligatory</span>
+            <textarea name="description" placeholder="About the project" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+        </div>
+
+        <div>
+            <label for="category">Category:</label>
+            <span class="alert"  *ngIf="category.touched && !category.valid">The category is obligatory</span>
+            <input type="text" placeholder="Category of the project" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+        </div>
+
+        <div>
+            <label for="year">Year:</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required>
+        </div>
+
+        <div>
+            <label for="langs">Languages:</label>
+            <span class="alert"  *ngIf="langs.touched && !langs.valid">The languages are obligatory</span>
+            <input type="text" placeholder="Used in project" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+        </div>
+
+        <div>
+            <label for="image">Image for project:</label>
+            <input type="file" name="image" placeholder="" required>
+        </div>
+
+        <input type="submit" value="Submit" [disabled]="!projectForm.form.valid">
+    </form>
+</div>
+

@@ -132,3 +132,83 @@ footer {
     padding: 20px 0px;
     text-align: justify;
 }
+
+/* SECTION WITH FORM */
+.content {
+    margin: 10px 180px;
+}
+.content h2 {
+    color: #6B3868;
+    border-bottom: 1px solid #6B3868;
+    padding-bottom: 3px;
+    margin-bottom: 15px;
+}
+form {
+    width: 100%;
+}
+form label {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    padding-bottom: 4px;
+}
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+    width: 99%;
+    padding: 5px;
+    border: 1px solid #8b8a8a;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+form textarea {
+    height: 50px;
+}
+form button,
+form input[type="submit"] {
+    display: block;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-top: 20px;
+    background-color: #6B3868;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form button:hover,
+form input[type="submit"]:hover {
+    background-color: #DB5771;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+form input[disabled]{
+    background-color: #8b8a8a;
+    cursor: not-allowed;
+}
+.alert {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.message { /* Success or failed*/
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+    text-align: center;
+    font-weight: 700;
+}
+.success {
+    background-color: green;
+    color: white;
+}
+.success a {
+    color: white;
+}
+.failed {
+    background-color: red;
+    color: white;
+}
