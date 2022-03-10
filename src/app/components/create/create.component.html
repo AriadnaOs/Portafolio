@@ -1,8 +1,8 @@
 <div class="content">
     <h2>{{title}}</h2>
 
-    <div class="message success" *ngIf="status == 'success'">
-        The project it has been created successfully, you can <a href="#">see here.</a>
+    <div class="message success" *ngIf="status == 'success' && save_project">
+        The project it has been created successfully, you can <a [routerLink]="['/proyecto', save_project._id]">see here.</a>
     </div>
 
     <div class="message failed" *ngIf="status  == 'failed'">
@@ -40,8 +40,8 @@
         </div>
 
         <div>
-            <label for="image">Image for project:</label>
-            <input type="file" name="image" placeholder="" required>
+            <label for="image">Project image:</label>
+            <input type="file" name="image" placeholder="Upload image" (change)="fileChangeEvent($event)" required>
         </div>
 
         <input type="submit" value="Submit" [disabled]="!projectForm.form.valid">
